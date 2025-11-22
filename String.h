@@ -17,7 +17,20 @@ public:
 	{
 		strcpy_s(str_, length_ + 1, str);
 	}
+	String(const String& other)
+		: String(other.str_)
+	{
+	}
 	~String() { delete[] str_; }
-	const char* getStr() { return str_; }
-};
 
+	size_t getLength() { return length_; }
+	const char* c_str() { return str_; }
+	String& setString(const char* str)
+	{
+		delete[] str_;
+		length_ = strlen(str);
+		str_ = new char[length_ + 1];
+		strcpy_s(str_, length_ + 1, str);
+		return *this;
+	}
+};
