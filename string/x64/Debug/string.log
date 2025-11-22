@@ -1,2 +1,2 @@
-﻿  string.cpp
-  string.vcxproj -> C:\Users\Роман Минков\Desktop\Shag\5 С++\22construktorThis\string\x64\Debug\string.exe
+﻿string.obj : error LNK2001: unresolved external symbol "private: static int String::strCounter" (?strCounter@String@@0HA)
+C:\Users\Роман Минков\Desktop\Shag\5 С++\22construktorThis\string\x64\Debug\string.exe : fatal error LNK1120: 1 unresolved externals

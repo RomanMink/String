@@ -11,5 +11,6 @@ int main()
     mystr1.printString().setString().printString();
     String mystr2("Roman");
     mystr2.printString().setString().printString();
+    mystr.getCounter();
 }
 
