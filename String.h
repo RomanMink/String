@@ -1,48 +1,36 @@
 #pragma once
-#include <iostream>
+#include <cstring>
 
 class String
 {
-	char* string;
-	static int strCounter;
-
+	char* str_;
+	size_t length_;
 public:
-	
-	String() 
+	String() : String(80) {}
+
+	String(size_t size)
+		: length_{ size }
+		, str_{ new char[length_+1] }
+	{}
+
+	String(const char* str) 
+		: String(strlen(str))
 	{
-		string = new char[80];
-		++strCounter;
-	}
-	String(int size)
-	{
-		string = new char[size];
-		++strCounter;
-	}
-	String(const char* str)
-	{
-		string = new char[sizeof(str)];
-		strcpy_s(string,sizeof(str), str);
-		++strCounter;
+		strcpy_s(str_,length_+1, str);
 	}
 	~String()
 	{
-		delete string;
-		--strCounter;
+		delete[] str_;
 	}
 
 
-	String& setString()
+	String& setStr()
 	{
-		std::cin >> string;
+		std::cin >> str_;
 		return *this;
 	}
-	String& printString()
+	const char* getStr()
 	{
-		std::cout << "str:" << string << std::endl;
-		return *this;
-	}
-	static void getCounter()
-	{
-		std::cout << strCounter;
+		return str_;
 	}
 };
