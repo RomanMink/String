@@ -12,4 +12,5 @@ int main()
     mystr.setString("Roman");
     std::cout << mystr.c_str() << std::endl;
     std::cout << mystr2.c_str() << std::endl;
+    std::cout << String::getCount() << std::endl;
 }

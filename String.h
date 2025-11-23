@@ -3,6 +3,7 @@
 #include <cstring>
 class String
 {
+	static size_t s_Counter;
 	size_t length_;
 	char* str_;
 public:
@@ -10,8 +11,7 @@ public:
 	String(size_t size)
 		: length_{ size }
 		, str_{ new char[length_ + 1] }
-	{
-	}
+	{++s_Counter;}
 	String(const char* str)
 		: String(strlen(str))
 	{
@@ -21,16 +21,10 @@ public:
 		: String(other.str_)
 	{
 	}
-	~String() { delete[] str_; }
+	~String() { delete[] str_; --s_Counter;}
 
 	size_t getLength() { return length_; }
+	static size_t getCount() { return s_Counter; }
 	const char* c_str() { return str_; }
-	String& setString(const char* str)
-	{
-		delete[] str_;
-		length_ = strlen(str);
-		str_ = new char[length_ + 1];
-		strcpy_s(str_, length_ + 1, str);
-		return *this;
-	}
+	String& setString(const char* str);
 };
