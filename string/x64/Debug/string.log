@@ -1,3 +1,2 @@
-﻿string.obj : error LNK2019: unresolved external symbol "public: class String & __cdecl String::setString(char const *)" (?setString@String@@QEAAAEAV1@PEBD@Z) referenced in function main
-string.obj : error LNK2001: unresolved external symbol "private: static unsigned __int64 String::s_Counter" (?s_Counter@String@@0_KA)
-C:\Users\Роман Минков\Desktop\Shag\5 С++\22construktorThis\string\x64\Debug\string.exe : fatal error LNK1120: 2 unresolved externals
+﻿  stringInterfeice.cpp
+  string.vcxproj -> C:\Users\Роман Минков\Desktop\Shag\5 С++\22construktorThis\string\x64\Debug\string.exe

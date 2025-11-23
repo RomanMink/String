@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="string.cpp" />
+    <ClCompile Include="stringInterfeice.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="String.h" />
