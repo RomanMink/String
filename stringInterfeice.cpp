@@ -9,3 +9,15 @@ String& String::setString(const char* str)
 	strcpy_s(str_, length_ + 1, str);
 	return *this;
 }
+String& String::apendStr(const char* str)
+{
+	length_ += strlen(str);
+	strcat(str_,str);
+	return *this;
+}
+String& String::apendStr(String string)
+{
+	length_ += strlen(string.str_);
+	strcat(str_, string.str_);
+	return *this;
+}

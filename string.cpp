@@ -10,7 +10,9 @@ int main()
     String mystr2 = mystr;
     std::cout << mystr2.c_str() << std::endl;
     mystr.setString("Roman");
-    std::cout << mystr.c_str() << std::endl;
+
+
+    mystr2.apendStr(mystr);
     std::cout << mystr2.c_str() << std::endl;
-    std::cout << String::getCount() << std::endl;
+
 }

@@ -23,8 +23,10 @@ public:
 	}
 	~String() { delete[] str_; --s_Counter;}
 
-	size_t getLength() { return length_; }
+	size_t getLength() const { return length_; }
 	static size_t getCount() { return s_Counter; }
-	const char* c_str() { return str_; }
+	const char* c_str() const { return str_; }
 	String& setString(const char* str);
+	String& apendStr(const char* str);
+	String& apendStr(String);
 };
