@@ -12,7 +12,13 @@ int main()
     mystr.setString("Roman");
 
 
-    mystr2.apendStr(mystr);
+    mystr2.appendStr(mystr);
+    std::cout << mystr2.c_str() << std::endl;
+
+    mystr2.appendStr(" Privet");
+    std::cout << mystr2.c_str() << std::endl;
+
+    mystr2.appendStr(" dfsghd fhdth dfjkh f jkfghnkfjhdfhnvghfk fghfgjklblfhnfhjhnmbfgmbjfhng g hh/.");
     std::cout << mystr2.c_str() << std::endl;
 
 }

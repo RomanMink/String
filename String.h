@@ -27,6 +27,6 @@ public:
 	static size_t getCount() { return s_Counter; }
 	const char* c_str() const { return str_; }
 	String& setString(const char* str);
-	String& apendStr(const char* str);
-	String& apendStr(String);
+	String& appendStr(const char* str);
+	String& appendStr(String);
 };
