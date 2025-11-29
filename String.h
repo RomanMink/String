@@ -8,11 +8,11 @@ class String
 	char* str_;
 public:
 	String() : String(80) {}
-	String(size_t size)
+	explicit String(size_t size)
 		: length_{ size }
 		, str_{ new char[length_ + 1] }
 	{++s_Counter;}
-	String(const char* str)
+	explicit String(const char* str)
 		: String(strlen(str))
 	{
 		strcpy_s(str_, length_ + 1, str);
